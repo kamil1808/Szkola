@@ -1,12 +1,10 @@
-public class Uczen {
-//składowe
-    String imie;
-    String nazwisko;
+public class Uczen extends Czlowiek {
+
     int[] oceny;
     int numer;
     boolean CzySieUczy;
 //metody
-   public void Ucz() {
+   public void UczSie() {
         CzySieUczy = true;
     }
 }

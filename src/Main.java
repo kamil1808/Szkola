@@ -8,7 +8,7 @@ public class Main {
         //klasa składa się z 9 uczniów
         // a określa ilu uczniów chcesz wyświetlić (max 9)
         utworzliste(22);
-        wypiszliste();
+        //wypiszliste();
     }
 
     public static void utworzliste(int a) {
@@ -48,7 +48,7 @@ public class Main {
             nazwiska[8] = "Adamowicz";
         }
 
-        wypiszliste();
+        //wypiszliste();
 
         Uczen[] uczen = new Uczen[a];
         for (int i = 0; i < a; i++) {
@@ -58,7 +58,7 @@ public class Main {
             //uczen[i].oceny = ocenyyy[i];
             uczen[i].numer = i + 1;
             if (uczen[i].imie == "Ania" || uczen[i].imie == "Ewa") {
-                uczen[i].Ucz();
+                uczen[i].UczSie();
             }
 
             System.out.println("nr." + uczen[i].numer + " " + uczen[i].imie + " " + uczen[i].nazwisko + " Uczy sie:" + uczen[i].CzySieUczy);
