@@ -10,7 +10,6 @@ public class Main {
         utworzliste1(9);
         utworzliste2(9);
         wypiszliste(utworzliste1(9), utworzliste2(9));
-
     }
 
     public static String[] utworzliste1(int a) {
@@ -56,8 +55,6 @@ public class Main {
     }
 
 
-
-
         public static void wypiszliste(String [] imiona, String [] nazwiska) {
         
             Uczen[] uczen = new Uczen[9];
@@ -75,9 +72,6 @@ public class Main {
             System.out.println("nr." + uczen[i].numer + " " + uczen[i].imie + " " + uczen[i].nazwisko + " Uczy sie:" + uczen[i].CzySieUczy);
         }
             }
-
-
-
     }
 
 
