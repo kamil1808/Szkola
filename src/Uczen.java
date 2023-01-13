@@ -1,15 +1,20 @@
 import java.util.*;
+import java.util.List;
 
 public class Uczen extends Czlowiek {
     Uczen() {
-         ArrayList<Integer> lista = new ArrayList<Integer>();
+        //Uczen.dodajOcene(Nauczyciel.ocenSprawdzian());
+        ArrayList<Integer> oceny = new ArrayList<Integer>();
     }
+    public  ArrayList<Integer> oceny = new ArrayList<Integer>();
     int numer;
     boolean CzySieUczy;
-    static ArrayList<Integer> lista = new ArrayList<Integer>();
+
 //metody
    public void UczSie() {
         CzySieUczy = true;
     }
-
+    public void dodajOcene(int ocena) {
+        oceny.add(ocena);
+    }
 }

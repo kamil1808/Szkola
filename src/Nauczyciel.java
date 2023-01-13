@@ -1,4 +1,6 @@
 import java.lang.Math;
+import java.util.ArrayList;
+
 public class Nauczyciel extends Czlowiek {
     String stanowisko;
     boolean CzyKogosUczy;
@@ -6,14 +8,17 @@ public class Nauczyciel extends Czlowiek {
     void uczKogos() {
         CzyKogosUczy = true;
     }
-    int ocenSprawdzian () {
 
+    void ocenSprawdzian(ArrayList<Uczen> klasa) {
+       // wez po kolei kazdego ucznia
+       klasa.forEach(uczen -> uczen.oceny.add(dajLosowaOcene()));
+    }
+
+    int dajLosowaOcene() {
         int nowaocena = (int) (Math.random()*6);
 
-        if (nowaocena < 0) {
+        if (nowaocena < 1) {
             nowaocena = 1;
-        } else if (nowaocena > 6) {
-            nowaocena = 6;
         }
 
         return nowaocena;
