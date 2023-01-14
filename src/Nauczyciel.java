@@ -2,7 +2,14 @@ import java.lang.Math;
 import java.util.ArrayList;
 
 public class Nauczyciel extends Czlowiek {
-    String stanowisko;
+
+    String kimJestem = "nauczycielem";
+    String ktoTo(){
+        if (imie.endsWith("a")) {
+            kimJestem = "nauczycielka";
+        }
+        return kimJestem;
+    }
     boolean CzyKogosUczy;
 
     void uczKogos() {

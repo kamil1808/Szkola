@@ -1,5 +1,6 @@
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Calendar;
+
 
 public class Main {
 
@@ -7,23 +8,30 @@ public class Main {
         System.out.println(" ");
         System.out.println("Witaj w Librus 3C");
         System.out.println(" ");
-        //utworzliste(9);
+
+
         ArrayList<Uczen> klasa3C = new ArrayList<>();
         klasa3C = utworzliste(9);
         ArrayList<Czlowiek> ludzie = new ArrayList<>();
-        //ludzie.addAll(klasa3C);
+        ludzie.addAll(klasa3C);
+
         Nauczyciel sobi = new Nauczyciel();
-        //ludzie.add(sobi);
-        //zapoznajLudzi(ludzie);
+        sobi.imie = "Jacek";
+        sobi.nazwisko = "Sobczyk";
+        ludzie.add(sobi);
+
+        Calendar kalendarz = Calendar.getInstance();
+        System.out.println("Dzisiejsza data to: " + kalendarz.getTime());
+        System.out.println(" ");
+
+        zapoznajLudzi(ludzie);
+        System.out.println(" ");
         sobi.ocenSprawdzian(klasa3C);
         wypiszliste(klasa3C);
     }
 
     private static void zapoznajLudzi(ArrayList<Czlowiek> ludzie) {
-        //na kazdym z listy wywolac przedtaw sie
-
-        //jestem nauczycielem i nazywam sie
-        //jestem uczniem i nazywam sie
+        ludzie.forEach(Czlowiek -> Czlowiek.przedstawsie());
     }
 
     public static ArrayList<Uczen> utworzliste(int a) {
@@ -38,8 +46,6 @@ public class Main {
             imiona[y] = new String();
             nazwiska[y] = new String();
             uczen[y] = new Uczen();
-            //ArrayList<Integer> oceny = new ArrayList<>();
-            //ocena[] [y] = new Oceny();
             imiona[0] = "Jan";
             imiona[1] = "Kuba";
             imiona[2] = "Ola";

@@ -1,10 +1,13 @@
 import java.util.*;
-import java.util.List;
+
 
 public class Uczen extends Czlowiek {
-    Uczen() {
-        //Uczen.dodajOcene(Nauczyciel.ocenSprawdzian());
-        ArrayList<Integer> oceny = new ArrayList<Integer>();
+    String kimJestem = "uczniem";
+    String ktoTo(){
+        if (imie.endsWith("a")) {
+            kimJestem = "uczennica";
+        }
+        return kimJestem;
     }
     public  ArrayList<Integer> oceny = new ArrayList<Integer>();
     int numer;
