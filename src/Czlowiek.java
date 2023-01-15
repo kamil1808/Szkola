@@ -6,6 +6,6 @@ public class Czlowiek  {
         return kimJestem;
     }
     void przedstawsie() {
-       System.out.println("Jestem " + ktoTo() + " i nazywam sie " + imie + " " + nazwisko);
+        System.out.println("Jestem " + ktoTo() + " i nazywam sie " + imie + " " + nazwisko);
    }
 }

@@ -10,7 +10,7 @@ public class Main {
         System.out.println(" ");
 
 
-        ArrayList<Uczen> klasa3C = new ArrayList<>();
+        ArrayList<Uczen> klasa3C;
         klasa3C = utworzliste(9);
         ArrayList<Czlowiek> ludzie = new ArrayList<>();
         ludzie.addAll(klasa3C);
@@ -21,7 +21,14 @@ public class Main {
         ludzie.add(sobi);
 
         Calendar kalendarz = Calendar.getInstance();
+        Calendar koniecroku = Calendar.getInstance();
+        koniecroku.set(2023, 5, 23);
+        long dzis = kalendarz.getTimeInMillis();
+        long koniec = koniecroku.getTimeInMillis();
+        long ilezostalodni = (long) (koniec - dzis)/(1000*24*60*60) ;
         System.out.println("Dzisiejsza data to: " + kalendarz.getTime());
+        System.out.println(" ");
+        System.out.println("Do konca roku szkolnego pozostalo: " + ilezostalodni + " Dni");
         System.out.println(" ");
 
         zapoznajLudzi(ludzie);
@@ -47,7 +54,7 @@ public class Main {
             nazwiska[y] = new String();
             uczen[y] = new Uczen();
             imiona[0] = "Jan";
-            imiona[1] = "Kuba";
+            imiona[1] = "Jakub";
             imiona[2] = "Ola";
             imiona[3] = "Ania";
             imiona[4] = "Adam";
