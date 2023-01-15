@@ -16,9 +16,13 @@ public class Main {
         ludzie.addAll(klasa3C);
 
         Nauczyciel sobi = new Nauczyciel();
+        Nauczyciel sabala = new Nauczyciel();
         sobi.imie = "Jacek";
-        sobi.nazwisko = "Sobczyk";
+        sobi.nazwisko = "Sobczak";
+        sabala.imie = "Grazyna";
+        sabala.nazwisko = "Sabalka";
         ludzie.add(sobi);
+        ludzie.add(sabala);
 
         Calendar kalendarz = Calendar.getInstance();
         Calendar koniecroku = Calendar.getInstance();
@@ -26,7 +30,9 @@ public class Main {
         long dzis = kalendarz.getTimeInMillis();
         long koniec = koniecroku.getTimeInMillis();
         long ilezostalodni = (long) (koniec - dzis)/(1000*24*60*60) ;
-        System.out.println("Dzisiejsza data to: " + kalendarz.getTime());
+
+        System.out.println("Dzisiejsza data to: " + String.format("%td %<tB", kalendarz));
+        System.out.println("Godzina: " + String.format("%tr", kalendarz));
         System.out.println(" ");
         System.out.println("Do konca roku szkolnego pozostalo: " + ilezostalodni + " Dni");
         System.out.println(" ");
@@ -34,6 +40,7 @@ public class Main {
         zapoznajLudzi(ludzie);
         System.out.println(" ");
         sobi.ocenSprawdzian(klasa3C);
+        sabala.ocenSprawdzian(klasa3C);
         wypiszliste(klasa3C);
     }
 
