@@ -9,7 +9,7 @@ public class Uczen extends Czlowiek {
         }
         return kimJestem;
     }
-    public  ArrayList<Integer> oceny = new ArrayList<Integer>();
+    public  ArrayList<Integer> oceny = new ArrayList<>();
     int numer;
     boolean CzySieUczy;
 

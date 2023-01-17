@@ -39,8 +39,16 @@ public class Main {
 
         zapoznajLudzi(ludzie);
         System.out.println(" ");
+
+        // ocenianie(<klasa>)  -  losowa ocena dla każdego ucznia
+        // ocenianie(<klasa> <numer w dzienniku>)   -  losowa ocena dla konkretnego ucznia ucznia
+        // ocenianie(<klasa> <numer w dzienniku> <ocena>)   -  konkretna ocena dla konkretnego ucznia
+
         sobi.ocenSprawdzian(klasa3C);
         sabala.ocenSprawdzian(klasa3C);
+        sabala.ocenSprawdzian(klasa3C, 1231);
+        sabala.ocenSprawdzian(klasa3C, 13, 9);
+
         wypiszliste(klasa3C);
     }
 
@@ -85,7 +93,7 @@ public class Main {
 
             uczniowie.add(uczen[y]);
 
-            if (uczen[y].imie == "Ania" || uczen[y].imie == "Ewa") {
+            if (uczen[y].imie.equals("Ania")  || uczen[y].imie.equals("Ewa")) {
                 uczen[y].UczSie();
             }
         }
