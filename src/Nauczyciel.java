@@ -2,6 +2,11 @@ import java.lang.Math;
 import java.util.ArrayList;
 
 public class Nauczyciel extends Czlowiek {
+    Nauczyciel() {
+        System.out.println(licznik + " Nowo dodany czlowiek, ktory jest " + kimJestem);
+    }
+        //public enum GronoPedagogiczne { SOBCZAK, DYREKTOR, WFISTA, WEGIEL}
+        //interfejsy dodaj, wyliczenia dodaj, switch dodaj
 
     String kimJestem = "nauczycielem";
 
@@ -11,6 +16,9 @@ public class Nauczyciel extends Czlowiek {
         }
         return kimJestem;
     }
+
+
+
 
     void ocenSprawdzian(ArrayList<Uczen> klasa) {
         klasa.forEach(uczen -> uczen.oceny.add(dajLosowaOcene()));
@@ -22,10 +30,18 @@ public class Nauczyciel extends Czlowiek {
         try {
             klasa.get(numer).oceny.add(dajLosowaOcene());
         } catch (java.lang.IndexOutOfBoundsException ex) {
-            numer = 8;
+            if (numer < 0) {
+                System.out.println("Podano za maly numer!!!");
+                System.out.println("Losowa ocena dla ucznia o podanym numerze zostala przypisana uczniowi numer 1!!!");
+                numer = 0;
+            } else if (numer > 8) {
+                System.out.println("Podano za duzy numer!!!");
+                System.out.println("Losowa ocena dla ucznia o podanym numerze zostala przypisana uczniowi numer 9!!!");
+                numer = 8;
+            }
+
             klasa.get(numer).oceny.add(dajLosowaOcene());
-            System.out.println("Podano za duzy numer!!!");
-            System.out.println("Losowa ocena dla ucznia o podanym numerze zostala przypisana uczniowi numer 9!!!");
+
             System.out.println(" ");
         }
     }
@@ -49,9 +65,6 @@ public class Nauczyciel extends Czlowiek {
             System.out.println(" ");
         }
     }
-
-
-
 
 
     int dajLosowaOcene() {

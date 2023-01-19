@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Calendar;
 
 
 public class Main {
@@ -9,10 +8,16 @@ public class Main {
         System.out.println("Witaj w Librus 3C");
         System.out.println(" ");
 
+        Kalendarz.pokazKalendarz();
+        //enum Dnitygodnia {PONIEDZIALEK, WTOREK, SRODA, CZWARTEK, PIATEK, SOBOTA, NIEDZIELA}
+        //Dnitygodnia dzientygodnia = Kalendarz.jakiDzisDzien();;
 
+
+        System.out.println(Kalendarz.jakiDzisDzien());
+        System.out.println(" ");
+        ArrayList<Czlowiek> ludzie = new ArrayList<>();
         ArrayList<Uczen> klasa3C;
         klasa3C = utworzliste(9);
-        ArrayList<Czlowiek> ludzie = new ArrayList<>();
         ludzie.addAll(klasa3C);
 
         Nauczyciel sobi = new Nauczyciel();
@@ -24,19 +29,6 @@ public class Main {
         ludzie.add(sobi);
         ludzie.add(sabala);
 
-        Calendar kalendarz = Calendar.getInstance();
-        Calendar koniecroku = Calendar.getInstance();
-        koniecroku.set(2023, 5, 23);
-        long dzis = kalendarz.getTimeInMillis();
-        long koniec = koniecroku.getTimeInMillis();
-        long ilezostalodni = (long) (koniec - dzis)/(1000*24*60*60) ;
-
-        System.out.println("Dzisiejsza data to: " + String.format("%td %<tB", kalendarz));
-        System.out.println("Godzina: " + String.format("%tr", kalendarz));
-        System.out.println(" ");
-        System.out.println("Do konca roku szkolnego pozostalo: " + ilezostalodni + " Dni");
-        System.out.println(" ");
-
         zapoznajLudzi(ludzie);
         System.out.println(" ");
 
@@ -46,14 +38,16 @@ public class Main {
 
         sobi.ocenSprawdzian(klasa3C);
         sabala.ocenSprawdzian(klasa3C);
-        sabala.ocenSprawdzian(klasa3C, 1231);
+        sabala.ocenSprawdzian(klasa3C, -3);
         sabala.ocenSprawdzian(klasa3C, 13, 9);
 
         wypiszliste(klasa3C);
     }
 
     private static void zapoznajLudzi(ArrayList<Czlowiek> ludzie) {
+        System.out.println(" ");
         ludzie.forEach(Czlowiek -> Czlowiek.przedstawsie());
+
     }
 
     public static ArrayList<Uczen> utworzliste(int a) {
@@ -65,9 +59,10 @@ public class Main {
         Uczen[] uczen = new Uczen[a];
         ArrayList<Uczen> uczniowie = new ArrayList();
         for (int y = 0; y < a; y++) {
-            imiona[y] = new String();
-            nazwiska[y] = new String();
+            //imiona[y] = new String();
+            //nazwiska[y] = new String();
             uczen[y] = new Uczen();
+
             imiona[0] = "Jan";
             imiona[1] = "Jakub";
             imiona[2] = "Ola";
@@ -86,6 +81,7 @@ public class Main {
             nazwiska[6] = "Lis";
             nazwiska[7] = "Siwor";
             nazwiska[8] = "Adamowicz";
+
 
             uczen[y].imie = imiona[y];
             uczen[y].nazwisko = nazwiska[y];
