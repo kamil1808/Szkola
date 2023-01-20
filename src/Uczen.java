@@ -6,7 +6,8 @@ public class Uczen extends Czlowiek {
         System.out.println(licznik + " Nowo dodany czlowiek, ktory jest " + kimJestem);
     }
     String kimJestem = "uczniem";
-    String ktoTo(){
+
+    String ktoTo() {
         if (imie.endsWith("a")) {
             kimJestem = "uczennica";
         }

@@ -8,12 +8,14 @@ public class Main {
         System.out.println("Witaj w Librus 3C");
         System.out.println(" ");
 
-        Kalendarz.pokazKalendarz();
-        //enum Dnitygodnia {PONIEDZIALEK, WTOREK, SRODA, CZWARTEK, PIATEK, SOBOTA, NIEDZIELA}
-        //Dnitygodnia dzientygodnia = Kalendarz.jakiDzisDzien();;
+
+            Kalendarz.pokazKalendarz();
 
 
-        System.out.println("Dzis jest: " + Kalendarz.jakiDzisDzien());
+    System.out.println("Dzis jest: " + Kalendarz.jakiDzisDzien());
+
+
+
         System.out.println(" ");
         ArrayList<Czlowiek> ludzie = new ArrayList<>();
         ArrayList<Uczen> klasa3C;
@@ -38,8 +40,26 @@ public class Main {
 
         sobi.ocenSprawdzian(klasa3C);
         sabala.ocenSprawdzian(klasa3C);
-        sabala.ocenSprawdzian(klasa3C,3);
-        sabala.ocenSprawdzian(klasa3C, 7, 5);
+        try {
+            sabala.ocenSprawdzian(klasa3C,10);
+       } catch (Nauczyciel.ZaMalyNumer zmn) {
+            System.out.println("Podano za maly numer!!!");
+            System.out.println(" ");
+        } catch (Nauczyciel.ZaDuzyNumer zdn) {
+            System.out.println("Podano za duzy numer!!!");
+            System.out.println(" ");
+        }
+
+
+        try {
+            sabala.ocenSprawdzian(klasa3C, 90, 5);
+        } catch (Nauczyciel.ZaMalyNumer zmn) {
+            System.out.println("Podano za maly numer!!!");
+            System.out.println(" ");
+        } catch (Nauczyciel.ZaDuzyNumer zdn) {
+            System.out.println("Podano za duzy numer!!!");
+            System.out.println(" ");
+        }
 
         wypiszliste(klasa3C);
     }

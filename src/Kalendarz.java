@@ -15,10 +15,9 @@ public class Kalendarz {
         System.out.println(" ");
     }
     enum Dzientygodnia {BLAD_METODY,PONIEDZIALEK, WTOREK, SRODA, CZWARTEK, PIATEK, SOBOTA, NIEDZIELA}
-    public static Dzientygodnia jakiDzisDzien() {
+    public static Dzientygodnia jakiDzisDzien()  {
         Calendar kalendarz = Calendar.getInstance();
         Dzientygodnia dzientygodnia = Dzientygodnia.BLAD_METODY;
-
         switch (kalendarz.get(Calendar.DAY_OF_WEEK)) {
             case 1 -> dzientygodnia = Dzientygodnia.NIEDZIELA;
             case 2 -> dzientygodnia = Dzientygodnia.PONIEDZIALEK;
