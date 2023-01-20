@@ -1,13 +1,15 @@
 import java.lang.Math;
 import java.util.ArrayList;
 
-public class Nauczyciel extends Czlowiek {
+public class Nauczyciel extends Czlowiek implements Pedagog {
     Nauczyciel() {
         System.out.println(licznik + " Nowo dodany czlowiek, ktory jest " + kimJestem);
     }
         //public enum GronoPedagogiczne { SOBCZAK, DYREKTOR, WFISTA, WEGIEL}
         //interfejsy dodaj, wyliczenia dodaj, switch dodaj
 
+        public void UczKogos() {
+        }
     String kimJestem = "nauczycielem";
 
     String ktoTo() {
@@ -47,7 +49,7 @@ public class Nauczyciel extends Czlowiek {
     }
 
 
-    void ocenSprawdzian(ArrayList<Uczen> klasa, int numer, int ocena) {
+    public void ocenSprawdzian(ArrayList<Uczen> klasa, int numer, int ocena) {
         numer -= 1;
         if (ocena < 1) {
             ocena = 1;
@@ -76,5 +78,9 @@ public class Nauczyciel extends Czlowiek {
 
         return nowaocena;
     }
+
+
+
 }
+
 

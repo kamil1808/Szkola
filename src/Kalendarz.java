@@ -14,21 +14,19 @@ public class Kalendarz {
         System.out.println("Do konca roku szkolnego pozostalo: " + ilezostalodni + " Dni");
         System.out.println(" ");
     }
-    enum Dzientygodnia {PONIEDZIALEK, WTOREK, SRODA, CZWARTEK, PIATEK, SOBOTA, NIEDZIELA}
-    Dzientygodnia dzientygodnia;
-    public static String jakiDzisDzien() {
-        String dzientygodnia = "NIE UDALO SIE OKRESLIC DNIA";
+    enum Dzientygodnia {BLAD_METODY,PONIEDZIALEK, WTOREK, SRODA, CZWARTEK, PIATEK, SOBOTA, NIEDZIELA}
+    public static Dzientygodnia jakiDzisDzien() {
         Calendar kalendarz = Calendar.getInstance();
-        enum Dzientygodnia {PONIEDZIALEK, WTOREK, SRODA, CZWARTEK, PIATEK, SOBOTA, NIEDZIELA}
-        //Dzientygodnia dzientygodnia = Dzientygodnia.CZWARTEK;
+        Dzientygodnia dzientygodnia = Dzientygodnia.BLAD_METODY;
+
         switch (kalendarz.get(Calendar.DAY_OF_WEEK)) {
-            case 1 -> dzientygodnia = "NIEDZIELA";
-            case 2 -> dzientygodnia = "PONIEDZIALEK";
-            case 3 -> dzientygodnia = "WTOREK";
-            case 4 -> dzientygodnia = "SRODA";
-            case 5 -> dzientygodnia = "CZWARTEK";
-            case 6 -> dzientygodnia = "PIATEK";
-            case 7 -> dzientygodnia = "SOBOTA";
+            case 1 -> dzientygodnia = Dzientygodnia.NIEDZIELA;
+            case 2 -> dzientygodnia = Dzientygodnia.PONIEDZIALEK;
+            case 3 -> dzientygodnia = Dzientygodnia.WTOREK;
+            case 4 -> dzientygodnia = Dzientygodnia.SRODA;
+            case 5 -> dzientygodnia = Dzientygodnia.CZWARTEK;
+            case 6 -> dzientygodnia = Dzientygodnia.PIATEK;
+            case 7 -> dzientygodnia = Dzientygodnia.SOBOTA;
         }
         return dzientygodnia;
     }

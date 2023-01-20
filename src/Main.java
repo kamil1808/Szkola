@@ -13,7 +13,7 @@ public class Main {
         //Dnitygodnia dzientygodnia = Kalendarz.jakiDzisDzien();;
 
 
-        System.out.println(Kalendarz.jakiDzisDzien());
+        System.out.println("Dzis jest: " + Kalendarz.jakiDzisDzien());
         System.out.println(" ");
         ArrayList<Czlowiek> ludzie = new ArrayList<>();
         ArrayList<Uczen> klasa3C;
@@ -38,8 +38,8 @@ public class Main {
 
         sobi.ocenSprawdzian(klasa3C);
         sabala.ocenSprawdzian(klasa3C);
-        sabala.ocenSprawdzian(klasa3C, -3);
-        sabala.ocenSprawdzian(klasa3C, 13, 9);
+        sabala.ocenSprawdzian(klasa3C,3);
+        sabala.ocenSprawdzian(klasa3C, 7, 5);
 
         wypiszliste(klasa3C);
     }
@@ -71,7 +71,7 @@ public class Main {
             imiona[5] = "Olek";
             imiona[6] = "Iza";
             imiona[7] = "Marek";
-            imiona[8] = "Ewa";
+            imiona[8] = "Monika";
             nazwiska[0] = "Kotry";
             nazwiska[1] = "Owalny";
             nazwiska[2] = "Miskowiec";
@@ -89,7 +89,7 @@ public class Main {
 
             uczniowie.add(uczen[y]);
 
-            if (uczen[y].imie.equals("Ania")  || uczen[y].imie.equals("Ewa")) {
+            if (uczen[y].imie.equals("Ania")  || uczen[y].imie.equals("Monika")) {
                 uczen[y].UczSie();
             }
         }
