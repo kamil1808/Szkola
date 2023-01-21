@@ -1,7 +1,7 @@
 import java.util.*;
 
 
-public class Uczen extends Czlowiek {
+public class Uczen extends OsobaWystepujacaWSzkole {
     Uczen() {
         System.out.println(licznik + " Nowo dodany czlowiek, ktory jest " + kimJestem);
     }

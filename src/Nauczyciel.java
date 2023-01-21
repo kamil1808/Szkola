@@ -1,7 +1,7 @@
 import java.lang.Math;
 import java.util.ArrayList;
 
-public class Nauczyciel extends Czlowiek implements Pedagog {
+public class Nauczyciel extends OsobaWystepujacaWSzkole {
     Nauczyciel() {
         System.out.println(licznik + " Nowo dodany czlowiek, ktory jest " + kimJestem);
     }

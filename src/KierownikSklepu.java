@@ -1,7 +1,4 @@
-public class Dyrektor extends OsobaWystepujacaWSzkole implements Szef {
-
-    public void UczKogos() {
-    }
+public class KierownikSklepu extends OsobaWystepujacaWSklepie implements Szef{
 
     @Override
     public void ZwolnijPracownika() {
